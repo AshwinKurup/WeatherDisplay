@@ -3,32 +3,20 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:flutter_conditional_rendering/flutter_conditional_rendering.dart';
 Future<void> main() async {
-
   print("main Method");
-
-
-
-
   runApp(MyApp());
-
 }
 
+
 Future<String> getAssetLocation() async {
-
   var weatherPrediction = await listenForWeather();
-
-
   print("this is the weatherIconValue value written in button");
   String location = "assets/images/" + weatherPrediction + ".png";
   print("this is the future value written in button");
   print(weatherPrediction);
   print("this is the location");
   print(location);
-
   int number = 1;
-
-
-
   return weatherPrediction;
 }
 
@@ -46,7 +34,6 @@ Future<String> listenForWeather() async{
       }
     }
   }
-
 
 
 class MyApp extends StatelessWidget {
